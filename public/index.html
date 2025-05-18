@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Part B - task 4 use a Html and AJAX page that allows users to search for all points of interest in a given region -->
+<html>
+<head>
+<!--Part D - task 8 Add a map using leaflet and open street map -->
+<link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css'/>
+<script type='text/javascript' src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+<script type='text/javascript' src='index.js' defer></script>
+<style type='text/css'>
+body,input[type=button] {
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    background-color: #2F6B77;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+#logodiv {
+    text-align: center;
+}
+
+#main {
+    font-size: 120%;
+}
+
+#results {
+    border: 1px solid black;
+    background-color: white;
+    width: 800px;
+    height: 250px;
+    overflow: auto;
+}
+
+#map1 {
+    width: 800px;
+    height: 600px;
+}
+
+#loginStatus {
+    text-align: right;
+    float: right;
+}
+
+#login {
+    background-color: red;
+}
+
+#logout{ 
+    background-color: green;
+}
+
+#form{
+    background-color: purple;
+    float: right;
+    text-align: right;
+}
+
+#addResults{
+    color: red;
+}
+</style>
+<head>
+<body>
+<!--Part E task 10 impelent a session based login system-->    
+    <div id="loginStatus">
+        <div id="login">
+            <h3>Welcome Please login</h3> </br>
+            Username: <input id='Username'/> </br>
+            Password: <input id='Password'/> </br>
+            <input type='button' id='loginButton' value='Login' />
+        </div>
+        <div id="logout">
+            <h3>Welcome <div id="user"></div></h3>
+            <input type='button' id='logoutButton' value='Logout' />
+        </div>
+    </div>
+    <h1>Welcome to PointsOfInterest</h1>
+    <p>Search here for anything that may interest you, wether its holiday locations, historical sites, countryside areas or any reccomended resturants, pubs or bars</p>
+    <p>
+        Search for all interesting places in a given region: <input id='region' />
+        <input type='button' id='search' value='Search!' />
+    </p>
+
+    <p>Results:</p>
+    <div id="form" hidden>
+        <h1>Add a Point Of Interest</h1>
+        Name:       <input id="name"/></br>
+        Type:       <input id="type"/></br>
+        Country:    <input id="country"/></br>
+        Region:     <input id="region1"/></br>
+        Longitute:  <input id="lon"/></br>
+        Latitude:   <input id="lat"/></br>
+        Description:<input id="description"/></br>
+        <input type='button' id='add' value='add' />
+        <div id = "addResults"></div>
+    </div>
+    <div id="map1"> </div>
+    <div id='results'>
+    </div>
+    <p>Have a point of interest that you don't see? add it here.</p>
+    <a href="http:/add.html">Add a Point of Interest</a> 
+</body>
+<html>

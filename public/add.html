@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Part B - task 5 allows users to create a point of interest -->
+<html>
+<head>
+<script type='text/javascript' src='add.js' defer></script>
+<style type='text/css'>
+body,input[type=button] {
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    background-color:purple;
+    color: black;
+    font-size: 120%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#logodiv {
+    text-align: center;
+}
+
+#main {
+    font-size: 180%;
+}
+
+#create {
+    float: left;
+    text-align: right;
+}
+
+#results {
+    font-size: 150%;
+    color: red;
+}
+
+</style>
+</head>
+<body>
+    <div id="create">
+        <h1>Add a Point Of Interest</h1>
+        Name:       <input id="name"/></br>
+        Type:       <input id="type"/></br>
+        Country:    <input id="country"/></br>
+        Region:     <input id="region"/></br>
+        Longitute:  <input id="lon"/></br>
+        Latitude:   <input id="lat"/></br>
+        Description:<input id="description"/></br>
+        <input type='button' id='add' value='add' />
+        <div id = "results"></div>
+    </div>
+</body>
+</html>
